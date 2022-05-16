@@ -576,6 +576,10 @@ footer p {
     padding-bottom: 10px;
   }
 
+  .customer-card {
+    width: 100%;
+  }
+
   .comment {
     margin-top: 60px;
     margin-bottom: 0;
