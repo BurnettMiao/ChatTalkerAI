@@ -571,6 +571,7 @@ footer p {
   }
 
   .customer-cards {
+    flex-basis: auto;
     justify-content: center;
     align-items: center;
     text-align: left;
