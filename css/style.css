@@ -560,7 +560,7 @@ footer p {
 
   .customers {
     margin-top: 60px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 32px;
     padding-top: 10px;
