@@ -452,6 +452,12 @@ nav a {
   background-color: var(--line-color);
 }
 
+@media (max-width: 1200px) {
+  .header {
+    height: 700px;
+  }
+}
+
 @media (max-width: 1090px) {
   /* 1090 comment section */
     .comment-cards .comment-card:last-child {
@@ -514,6 +520,13 @@ nav a {
     .experience h2 {
       padding-top: 220px;
     }
+}
+
+@media (max-width: 820px) {
+  /* 820 header section */
+  .header {
+    height: 510px;
+  }
 }
 
 @media (max-width: 768px) {
