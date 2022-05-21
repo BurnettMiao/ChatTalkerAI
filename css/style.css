@@ -73,6 +73,8 @@ h4 {
   z-index: -10;
   position: relative;
   overflow: hidden;
+
+  padding-top: 88px;
 }
 
 .header::before {
@@ -91,10 +93,17 @@ h4 {
 }
 
 nav {
+  width: 100%;
+  padding: 24px 0;
+
+  position: absolute;
+  margin: 0 auto;
+}
+
+.nav-set {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
 }
 
 nav img {
@@ -428,7 +437,7 @@ nav a {
 }
 
 .experience h2 {
-  padding-top: 250px;
+  padding-top: 300px;
 }
 
 .experience a {
@@ -464,6 +473,7 @@ nav a {
   .header::before {
     width: 200px;
     height: 200px;
+    transform: translate(-60%, 50%);
   }
 
   .hero-content h1 {
@@ -475,6 +485,7 @@ nav a {
   .platform::before {
     width: 200px;
     height: 200px;
+    transform: translate(-60%, -50%);
   }
 
   .social-platforms {
@@ -515,6 +526,7 @@ nav a {
    .header {
     background-image: none;
     height: auto;
+    padding-top: 0;
   }
 
   .header::before {
@@ -526,7 +538,7 @@ nav a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 150;
     border-bottom: 3px solid var(--dot-color);
     width: 100%;
     padding: 16px 20px;
