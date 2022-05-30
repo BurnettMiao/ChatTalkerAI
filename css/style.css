@@ -9,13 +9,15 @@
   --shadow-color: #00000014;
   --line-color: #DDDDDD;
   --dot-color: #FFD153;
+  --charge-bg: #F7F9FD;
+  --calculation-bg-color: #F5F5F5;
 }
 
 *, ::before ,::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid #221E1F; */
+  outline: 1px solid #221E1F;
 }
 
 html, body {
@@ -48,6 +50,10 @@ section {
   border-radius: 22px;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 h2 {
   font-size: 32px;
 }
@@ -58,6 +64,10 @@ h3 {
 
 h4 {
   font-size: 18px;
+}
+
+ul {
+  list-style: none;
 }
 
 /* header section */
@@ -445,7 +455,228 @@ nav a {
   background-color: var(--main-color);
 }
 
-/* fooer section */
+/***** Charge Page *****/
+
+.charge-header {
+  position: relative;
+  width: 100%;
+  height: 560px;
+}
+
+.charge-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--charge-bg);
+  border-radius: 0 0 0 300px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 470px;
+  z-index: -5;
+}
+
+.charge-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/banner.svg);
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 885px;
+  height: 560px;
+  z-index: -5;
+}
+
+.charge-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.charge-content p {
+  margin-top: 16px;
+}
+
+/* charge-price section */
+.charge-price {
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+
+.charge-price::before {
+  content: '';
+  background-image: url(../images/ball03.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 360px;
+  height: 360px;
+  position: absolute;
+  top: 25%;
+  left: -15%;
+  z-index: -10;
+}
+
+.quota-card {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  font-size: 18px;
+}
+
+.quota-card-active {
+  background-color: var(--main-color);
+  color: var(--btn-text-color);
+  font-size: 18px;
+}
+
+.price-quota {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.price-cards {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px
+}
+
+.price-card {
+  width: 445px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px var(--shadow-color);
+  background-color: var(--btn-text-color);
+}
+
+.price-card h3 {
+  padding: 16px 0 16px 0;
+}
+
+.line {
+  width: 100%;
+  height: .2px;
+  background-color: var(--line-color);
+}
+
+.price-card p {
+  margin: 32px 0 32px 0;
+}
+
+.price-calculation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculation {
+  padding: 32px 24px;
+  background-color: var(--calculation-bg-color);
+  border-radius: 12px;
+}
+
+.calculation-text {
+  font-size: 12px;
+}
+
+.calculation-people {
+  font-size: 32px;
+  color: var(--main-color);
+}
+
+.calculation-people span {
+  font-size: 12px;
+}
+
+.equal {
+  font-size: 29px;
+  margin: 0 21px 0 21px;
+}
+
+.calculation-money {
+  font-size: 32px;
+}
+
+.calculation-money span {
+  font-size: 12px;
+}
+
+.price-card ul{
+  margin: 32px 29px 0 29px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.price-card ul li {
+  margin-bottom: 16px;
+}
+
+.price-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.price-card .quota-card-active {
+  margin: 42px 0 38px 0;;
+}
+
+.price-card ul li img {
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+/* normal-questions section */
+.normal-questions {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.normal-questions-cards {
+  margin-top: 48px;
+}
+
+.normal-question-card {
+  margin-top: 16px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px var(--shadow-color);
+  text-align: left;
+}
+
+.question-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.normal-question-card p {
+  font-size: 18px;
+}
+
+.question-card-active {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.question-card-text-active {
+  margin-top: 24px;
+  color: var(--text-color-gray);
+  text-align: left;
+}
+
+/* all fooer section */
 .footer {
   text-align: center;
   padding: 16px 0;
@@ -620,7 +851,7 @@ nav a {
      display: none;
   }
 
-  /* 769 experience sextion */
+  /* 768 experience sextion */
   .experience {
     height: 300px;
   }
@@ -632,9 +863,18 @@ nav a {
   .experience a {
     margin-top: 24px;
   }
+
+  /* 768 charge header page */
+  .charge-content {
+    top: 60%;
+  }
 }
 
 @media (max-width: 425px) {
+  h1 {
+      font-size: 28px;
+    }
+
   h2 {
     font-size: 28px
   }
@@ -702,6 +942,82 @@ nav a {
     font-size: 24px;
     padding-top: 320px;
   }
+
+  /* 425 charge-header section */
+  .charge-header {
+    width: 100%;
+    height: 615px;
+    margin-bottom: 60px;
+  }
+
+  .charge-header h1{
+    font-size: 32px;
+  }
+
+  .charge-header::before {
+    border-radius: 0 0 0 100px;
+    width: 100%;
+    height: 615px;
+  }
+
+  .charge-content {
+    top: 30%;
+  }
+
+  .charge-header::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    background-image: url(../images/banner_sm.svg);
+    background-position: top left;
+    background-size: calc(100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 555px;
+  }
+
+  /* 425 charge-price section */
+  .price-card {
+    width: 100%;
+  }
+
+  .calculation {
+    padding: 16px 24px;
+  }
+
+  .price-card .quota-card-active {
+    margin: 35px 24px;
+  }
+
+  .calculation-people {
+    font-size: 28px;
+  }
+
+  .calculation-money {
+    font-size: 28px;
+  }
+
+  .charge-price::before {
+    width: 180px;
+    height: 180px;
+    top: 55%;
+    left: -25%;
+  }
+
+  /* 425 normal-questions */
+  .normal-questions {
+    margin: 60px 0;
+  }
+
+  .normal-question-card p {
+    font-size: 16px;
+  }
+
+  .normal-question-card {
+    font-size: 16px;
+    padding: 16px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -712,11 +1028,32 @@ nav a {
   .experience h2 {
     padding-top: 280px;
   }
+
+  /* 375 charge-header section */
+  .charge-header {
+    height: 550px;
+  }
+
+  .equal {
+    font-size: 22px;
+  }
+
+  .charge-header::before {
+    height: 550px;
+  }
+
+  .charge-header::after {
+    height: 495px
+  }
 }
 
 @media (max-width: 320px) {
   h2 {
     font-size: 22px
+  }
+
+  p {
+    font-size: 16px;
   }
 
   .platform h3 {
@@ -727,9 +1064,6 @@ nav a {
     padding: 6px 18px;
   }
 
-  .hero-content h1 {
-    font-size: 28px;
-  }
 
   .hero-img {
     min-width: 100%;
@@ -743,6 +1077,48 @@ nav a {
     padding-top: 240px;
     font-size: 22px;
   }
+
+  /* 320 charge-header section */
+  .charge-header {
+    height: 470px;
+  }
+
+  .charge-header h1 {
+    font-size: 28px;
+  }
+
+  .charge-header::before {
+    height: 470px
+  }
+
+  .charge-header::after {
+    height: 420px;
+  }
+
+  /* 320 charge-price section */
+  .calculation {
+    padding: 8px 12px;
+  }
+
+  .charge-price::before {
+    width: 120px;
+    height: 120px;
+    top: 55%;
+    left: -25%;
+  }
+
+  .equal {
+    margin: 0 16px 0 16px;
+  }
+
+  .calculation-people {
+    font-size: 20px;
+  }
+
+  .calculation-money {
+    font-size: 20px;
+  }
+
 }
 
-/* 20220521修改 */
+/* 20220530修改 */
